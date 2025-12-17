@@ -32,6 +32,10 @@ public class Studententity{
         this.age=age;
     }
     public String getEmail(){
-        return emaill
+        return email;
     }
+        public void setEmail(String email){
+            this.email=email;
+        }
+    
 }
