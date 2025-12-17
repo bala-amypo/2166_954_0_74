@@ -12,5 +12,23 @@ public class StudentController{
     public class Studentservice {
         @Autowired
         private Studentservice service;
+
+        @PostMapping("/add")
+        public Studententity addStudent(@RequestBody Studententity student){
+            return service.addStudent(student);
+        }
+
+        @GetMapping("/all")
+        public List<Studententity>getAllStudent(){
+            return service.getStudent();
+        }
+
+        @PostMapping("/update/{id}")
+        public Studententity updateStudent(
+            @PathVariable Long id,
+            @RequestBody Studententity student
+        ){
+            return service.updateStudent(id,student);
+        }
     }
 }
