@@ -3,4 +3,6 @@ import org.springframework.data.jpa.repository.jparepository;
 import org.springframework.stereotype.repository;
 import com.example.demo.entity.student;
 @repository
-public interface Studentrepo extends 
+public interface Studentrepo extends jparepository<Student,Long>{
+    
+}
